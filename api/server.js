@@ -6,6 +6,8 @@ const server = express();
 
 server.use(express.json());
 
+server.use('/api/recipes', RecipesRouter);
+
 server.get('/', (req, res) => {
   res.status(200).json({ message: 'The API is running' });
 });
